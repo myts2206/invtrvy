@@ -20,7 +20,7 @@ const App = () => (
           <Route path="/invtrvy/login" element={<Login />} />
           <Route path="/invtrvy/dashboard" element={<Index />} />
           {/* Redirect root to login page */}
-          <Route path="/invtrvy" element={<Navigate to="/invtrvy/login" replace />} />
+          <Route path="/" element={<Navigate to="/login" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
