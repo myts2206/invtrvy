@@ -17,10 +17,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Index />} />
+          <Route path="/invtrvy/login" element={<Login />} />
+          <Route path="/invtrvy/dashboard" element={<Index />} />
           {/* Redirect root to login page */}
-          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="/invtrvy" element={<Navigate to="/invtrvy/login" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
