@@ -1,4 +1,4 @@
-
+// App.tsx
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -15,13 +15,12 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/invtrvy">
         <Routes>
-          <Route path="/invtrvy/login" element={<Login />} />
-          <Route path="/invtrvy/dashboard" element={<Index />} />
-          {/* Redirect root to login page */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Index />} />
+          {/* Redirect root to /login */}
           <Route path="/" element={<Navigate to="/login" replace />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
